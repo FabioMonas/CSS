@@ -1,54 +1,106 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body{
-        background-color:black;
-      }
-      
-      .Card{ 
-          border: 0px solid #4c5da8;
-          background-color:blue;
-          width:297px;
-          height:400px;
-          margin:10px;
-          padding:10px;
-          padding-top:4px;
-      }
-      .CardInternoBox{
-            border: 3px solid black;
-          width:290px;
-          height:380px;
-     background-color:rgb(0, 80, 255);
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.button {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
 
-      }
-      h1{
-       text-align:center;
-       font-size:150%;
-       
-     }
-      
-     
-      p {
-        font-size:150%;
-        color:Black;
-        text-align:center;
-        margin:20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Album di classe  </h1>
-    <div class="Card">
-      <p><strong>FABIO MONAS</strong> </p>
-      <div class="CardInternoBox">
-        <div foto= "foto">
-          <img src="immagine.jpeg" width="290" height="250" >
-        <h1>27/02/2005<br>Nichelino<br>Palestra e Calcio<br></p1>
-        <a href=https://www.instagram.com/fabio_monas/>Instagram</a><br/>
 
-      </div>
-      
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+
+<h1>Album Di Classe</h1>
+<h3>Studente</h1>
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="foto.jpeg" alt="Avatar" style="width:300px;height:300px;">
     </div>
-    
-  </body>
+    <div class="flip-card-back">
+      <h1>Fabio Monas</h1> 
+      <p>Residenza: Nichelino</p> 
+      <p>Età: 16 anni</p>
+      <p>Classe: 3B Info</p> <p>Scuola: J.C.Maxwell</p>
+      <p>Hobby: Palestra e Calcio</p>
+      <button class="button button2"><a href="https://it.altervista.org/">Visita il mio sito!</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
 </html>
